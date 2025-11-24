@@ -1,55 +1,37 @@
-# Aryan Desai Portfolio Website
+# Aryan Desai's Portfolio Website
 
-[Check it out live!](https://aryan-desai-website.vercel.app/)
+📋 **Overview**  
+This repository contains the source code for my personal portfolio website. The website showcases my skills, projects, experience, and provides a way for recruiters and other professionals to learn more about me and my work.
 
-## About Me & This Website
+🎯 **Purpose**  
+This portfolio website serves as a digital resume and project showcase, designed to:
 
-Hi! I’m Aryan Desai, and this is my personal portfolio website. I built it to showcase my projects, skills, experience, and contact information in a clean, modern, and interactive way.  
+- Present my professional background and technical skills  
+- Showcase my projects with detailed descriptions and images  
+- Provide an easy way to contact me  
+- Demonstrate my web development and design capabilities  
 
-On this website, you’ll find:
+✨ **Features**
 
-- A **Home** section introducing me  
-- A **Projects** section highlighting my work  
-- A **Skills** section showing my technical abilities  
-- An **Experience** section detailing my professional background  
-- A **Contact** section where you can reach out to me  
-- Smooth animations and hover effects for a better user experience  
+- Responsive design for desktop, tablet, and mobile  
+- Modern UI/UX with smooth animations and hover effects  
+- Project showcase with images and links  
+- Interactive components for better user experience  
+- Fast loading and optimized for deployment on Vercel  
 
----
+💻 **Technologies Used**
 
-## Tech Stack
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)  
+- **Styling:** Modular CSS files for each section  
+- **Animations:** Vanilla JavaScript  
+- **Deployment:** Vercel  
+- **Development:** VS Code  
 
-I built this website using:
-
-- **HTML5** – For the structure of my pages  
-- **CSS3** – For styling, layout, and animations  
-- **JavaScript** – To add interactive features  
-- **Vercel** – To host and deploy the website  
-
-During development, I used tools like **VS Code** for coding and **Canva/Figma** for designing mockups.
-
----
-
-## Screenshots
-
-Here are some screenshots of the website:  
-
-![Home Page](screenshots/home.png)  
-![Projects Section](screenshots/projects.png)  
-![Contact Section](screenshots/contact.png)  
-
-*(I keep these screenshots in a `/screenshots` folder for reference.)*
-
----
-
-## Project Structure
-
-Here’s how my project is organized:
+📁 **Project Structure**
 
 aryan-desai-website/
-│
 ├─ index.html # Main homepage
-├─ css/ # All styling files
+├─ css/ # Styling for each section
 │ ├─ about.css
 │ ├─ contact.css
 │ ├─ experience.css
@@ -59,11 +41,11 @@ aryan-desai-website/
 │ ├─ project.css
 │ ├─ skills.css
 │ └─ top.css
-├─ js/ # All JavaScript files
+├─ js/ # JavaScript for animations and interactivity
 │ ├─ animations.js
 │ ├─ contact.js
 │ └─ skills.js
-├─ images/ # All image assets
+├─ images/ # Image assets
 │ ├─ Aryan.jpg
 │ ├─ Byte.jpg
 │ ├─ FlashFocus.jpg
@@ -71,11 +53,9 @@ aryan-desai-website/
 │ ├─ Qsec.jpg
 │ └─ taskmanager.jpg
 ├─ README.md # This file
-└─ LICENSE # License for the project
+└─ LICENSE # MIT License
 
-## Deployment
+🚀 **Deployment**
 
 I deployed this website on **Vercel** for fast, reliable hosting.  
-You can see it live here: [https://aryan-desai-website.vercel.app](https://aryan-desai-website.vercel.app/)
-
----
+[Visit the live site here](https://aryan-desai-website.vercel.app)
