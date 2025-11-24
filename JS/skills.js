@@ -21,14 +21,14 @@ const experienceData = [
         organization: "Byte - GitHub - SecureByte",
         github: "https://github.com/your-repo",
         date: "Jan 2024 - Present",
-        img: "Images\Byte.jpg" // Make sure this matches your file name
+        img: "Images/Byte.jpg" // Make sure this matches your file name
     },
     {
         role: "Back-End Developer | Node.js, Express.js, MongoDB, API Integration",
         organization: "Quantum Science & Engineering (QSEC)",
         github: "#",
         date: "Sep 2023 - Dec 2023",
-        img: "Images\Qsec.jpg" // Make sure this matches your file name
+        img: "Images/Qsec.jpg" // Make sure this matches your file name
     }
 ];
 

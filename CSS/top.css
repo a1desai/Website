@@ -1,20 +1,17 @@
-/* ===================== TOP NAVBAR ===================== */
 .navbar {
     width: 100%;
     height: 80px;
     display: flex;
+    justify-content: space-between; /* logo left, links right */
     align-items: center;
-    justify-content: space-between; /* distributes logo and links properly */
     padding: 0 50px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
 
-    /* Blue tech gradient background */
     background: linear-gradient(90deg, #001f3f, #003366);
-    backdrop-filter: blur(10px); /* glassy effect */
-
+    backdrop-filter: blur(10px);
     overflow: hidden;
 }
 
@@ -36,7 +33,7 @@
     100% { background-position: 50px 50px, -50px -50px; }
 }
 
-/* Keep navbar content above overlay */
+/* Navbar content stays above overlay */
 .navbar > * {
     position: relative;
     z-index: 10;
@@ -56,7 +53,9 @@
     list-style: none;
     display: flex;
     gap: 35px;
-    margin-left: 0; /* removed fixed huge margin */
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
 }
 
 /* Nav link style */
@@ -70,7 +69,7 @@
     position: relative;
 }
 
-/* Neon underline hover effect */
+/* Neon underline hover */
 .nav-links li a::after {
     content: "";
     position: absolute;
@@ -88,54 +87,4 @@
 
 .nav-links li a:hover {
     color: #00c0ff;
-}
-
-/* ===================== RESPONSIVE STYLES ===================== */
-@media screen and (max-width: 1200px) {
-    .nav-links {
-        gap: 25px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .navbar {
-        padding: 0 30px;
-    }
-    .nav-links {
-        gap: 20px;
-    }
-    .logo {
-        font-size: 24px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 20px;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-        margin-top: 10px;
-    }
-
-    .nav-links li a {
-        font-size: 16px;
-        width: 100%;
-        text-align: left;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .logo {
-        font-size: 20px;
-    }
-    .nav-links li a {
-        font-size: 14px;
-    }
 }

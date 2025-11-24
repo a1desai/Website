@@ -1,14 +1,16 @@
 /* Footer */
 #footer {
-    width: 100%;
+    width: 100%; /* full width of parent */
     padding: 20px 0;
-    background: rgba(0, 20, 40, 0.9); /* dark glassy blue */
+    background: rgba(0, 20, 40, 0.9);
     text-align: center;
     font-family: 'Poppins', sans-serif;
     border-top: 2px solid rgba(0, 192, 255, 0.4);
     box-shadow: 0 -5px 20px rgba(0, 192, 255, 0.3);
+    position: relative;
 }
 
+/* Footer text */
 #footer p {
     color: #cceeff;
     font-size: 14px;
@@ -20,4 +22,11 @@
 
 #footer p:hover {
     color: #00c0ff;
+}
+
+/* Prevent horizontal scroll caused by overflowing content */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }

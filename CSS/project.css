@@ -11,21 +11,25 @@
     align-items: center;
 }
 
+/* Keep title centered */
 #projects h2 {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 50px;
     color: #00c0ff;
     text-shadow: 0 0 8px rgba(0, 192, 255, 0.5);
+    text-align: center; /* ensure it's centered */
 }
 
-/* Projects Grid */
+/* Projects Grid: shift slightly to the left */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    width: 100%;
+    width: 95%; /* slightly less than 100% to shift left */
     max-width: 1200px;
+    margin-left: 0; /* align left */
+    margin-right: auto; /* keeps title centered while grid moves left */
 }
 
 /* Individual Project Card */

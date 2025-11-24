@@ -5,7 +5,7 @@
     background: linear-gradient(135deg, #000000, #001f3f, #002266); /* black-blue gradient */
     color: #ffffff;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 80px 50px;
     font-family: 'Poppins', sans-serif;
@@ -71,19 +71,20 @@
     box-shadow: 0 0 20px rgba(0, 192, 255, 0.7);
 }
 
-/* Right Side - Image Box */
 .about-right {
-    width: 380px;
-    height: 380px;
-    background: linear-gradient(135deg, #001f3f, #002266); /* subtle dark blue gradient */
+    width: 300px; /* smaller to fit better */
+    height: 300px;
+    background: linear-gradient(135deg, #001f3f, #002266);
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(0, 192, 255, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-left: -40px; /* moves image slightly left */
-    transform: translateX(-300px);
+
+    /* Move image slightly to the left */
+    transform: translateX(-100px); /* move left by 50px */
+    margin-left: 0; /* remove any previous margin-left if set */
 }
 
 .about-right img {
