@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<!-- Starts the HTML document and specifices the language -->
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/top.css">
+    <link rel="stylesheet" href="CSS/introduction.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/skills.css">
+    <link rel="stylesheet" href="CSS/experience.css">
+    <link rel="stylesheet" href="CSS/project.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <!-- Link to the external css file -->
+</head>
+
+<body>
+<!-- Everything visible on the page goes inside my body -->
+
+    <div class="navbar">
+        <div class="logo">Aryan Desai</div>
+
+        <ul class="nav-links">
+            <li><a href="#software-developer">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Introduction about me -->
+    <section id="software-developer">
+        <div class="software-developer-content">
+            <h2 id="typewriter">
+                <span class="intro-text"></span><br>
+                <span class="sub-text"></span>
+            </h2> <!-- Secondary Heading-->
+        </div>
+        <div class="software-dev">
+            <img src="Images\Aryan.jpg" alt="Aryan Desai">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <canvas id="about-canvas"></canvas>
+        <div class="about-left">
+            <h2>About Me</h2>
+            <p>
+                I'm a 2nd-year Computer Science student with a passion for AI, full-stack development,
+                and creating innovative software solutions. I love transforming ideas into functional,
+                efficient, and well-structured code, and thrive in collaborative projects that push
+                the boundaries of technology.
+            </p>
+            <div class="about-buttons">
+                <button id="skills-btn">Skills</button>
+                <button id="experience-btn">Experience</button>
+            </div>
+
+            <!-- Skills container -->
+            <div class="skills-container" id="skills-container" style="display: none;"></div>
+
+            <!-- Experience container -->
+            <div class="experience-container" id="experience-container" style="display: none;"></div>
+        </div>
+
+        <div class="about-right">
+            <img src="Images/Aryan.jpg" alt="Aryan Desai">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <h3>Kingdom Rush Java Edition</h3>
+                <p>Kingdom Defender is a dynamic tower defense strategy game built entirely with Java Swing, channeling the tactical complexity of the acclaimed Kingdom Rush series. The core objective is to strategically defend pathways against waves of increasingly powerful enemies through careful placement and upgrading of unique defense towers.</p>
+                
+                <!-- Project Image -->
+                <div class="project-img">
+                    <img src="Images/Kingdomrush.jpg" alt="Kingdom Rush Java Edition">
+                </div>
+
+                <!-- Project Skills -->
+                <div class="project-skills">
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%; background-color: #f39c12;"> 100%</div></div>
+                    </div>
+                </div>
+
+                <!-- Project links -->
+                <div class="project-links">
+                    <a href="https://github.com/Gaston-and-Aryan/Kingdom-Rush-Java-Edition.git" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <h3>FlashFocus</h3>
+                <p>FlashFocus is a Java application designed to help users study efficiently using flashcards and quizzes. Built with Java Swing, it features interactive screens, custom icons, and external API integration to generate flashcards automatically.</p>
+                
+                <div class="project-img">
+                    <img src="Images/FlashFocus.jpg" alt="FlashFocus">
+                </div>
+
+                <!-- Project Skills -->
+                <div class="project-skills">
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%; background-color: #f39c12;"> 100%</div></div>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/Flash-Focus/FlashFocus" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <h3>Task Manager</h3>
+                <p>A simple and efficient Task Manager application to help users organize, track, and manage their daily tasks. This project was built to practice software development principles, improve productivity tools, and implement clean UI and logic.</p>
+                
+                <div class="project-img">
+                    <img src="Images/taskmanager.jpg" alt="Task Manager">
+                </div>
+
+                <!-- Project Skills -->
+                <div class="project-skills">
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%; background-color: #f39c12;"> 100%</div></div>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/a1desai/Task-Manager-app" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Add more project cards here -->
+        </div>
+    </section>
+
+
+    
+
+    <!-- ====================== CONTACT SECTION ====================== -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form id="contact-form">
+            <input type="text" name="from_name" placeholder="Your Name" required>
+            <input type="email" name="from_email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Icons -->
+        <div class="contact-icons">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aryandes20@gmail.com" 
+                class="contact-icon" 
+                target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/aryan-desai-cs/" class="contact-icon" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/a1desai" class="contact-icon" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Font load -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Icon uploads -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!--Footer-->
+    <footer id="footer">
+        <p>&copy; 2025 Aryan Desai. All rights reserved.</p>
+    </footer>
+    <!-- Loading all of my js files -->
+    <script src="JS/animations.js"></script>
+    <script src="JS/skills.js"></script>
+    <script src="JS/contact.js"></script>
+    <!-- Emailjs SDK tag -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    (function(){
+        emailjs.init("lFoUzyGM39mCc3Gw_"); // replace with your EmailJS public key
+    })();
+    </script>
+</body>
+
+</html>
