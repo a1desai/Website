@@ -10,6 +10,17 @@
     padding: 80px 50px;
     font-family: 'Poppins', sans-serif;
     position: relative;
+    overflow: hidden;
+}
+
+#about-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* behind text and image */
+    pointer-events: none; /* so buttons are clickable */
 }
 
 /* Left Side - Text Content */
@@ -30,7 +41,8 @@
     font-size: 20px;
     line-height: 1.8;
     margin-bottom: 30px;
-    opacity: 0.9;
+    color: #e0f7ff; /* lighter neon blue */
+    text-shadow: 0 0 6px rgba(0, 192, 255, 0.7); /* subtle glow to improve readability */
 }
 
 /* Buttons */

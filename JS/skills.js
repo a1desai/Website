@@ -154,3 +154,4 @@ experienceData.forEach(exp => {
 // Event listeners
 document.getElementById('skills-btn').addEventListener('click', toggleSkills);
 document.getElementById('experience-btn').addEventListener('click', toggleExperience);
+

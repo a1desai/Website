@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/skills.css">
     <link rel="stylesheet" href="CSS/experience.css">
+    <link rel="stylesheet" href="CSS/project.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="CSS/footer.css">
     <!-- Link to the external css file -->
 </head>
 
@@ -43,6 +46,7 @@
 
     <!-- About Section -->
     <section id="about">
+        <canvas id="about-canvas"></canvas>
         <div class="about-left">
             <h2>About Me</h2>
             <p>
@@ -68,21 +72,123 @@
         </div>
     </section>
 
-    <!--Projects section-->
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
+
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <h3>Kingdom Rush Java Edition</h3>
+                <p>Kingdom Defender is a dynamic tower defense strategy game built entirely with Java Swing, channeling the tactical complexity of the acclaimed Kingdom Rush series. The core objective is to strategically defend pathways against waves of increasingly powerful enemies through careful placement and upgrading of unique defense towers.</p>
+                <!-- Project Image -->
+                <div class="project-img">
+                    <img src="Images\Kingdomrush.jpg" alt="Kingdom Rush Java Edition">
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Gaston-and-Aryan/Kingdom-Rush-Java-Edition.git" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <h3>FlashFocus</h3>
+                <p>FlashFocus is a Java application designed to help users study efficiently using flashcards and quizzes. Built with Java Swing, it features interactive screens, custom icons, and external API integration to generate flashcards automatically.</p>
+                <div class="project-img">
+                    <img src="Images\FlashFocus.jpg" alt="FlashFocus">
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Flash-Focus/FlashFocus" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <h3>Task Manager</h3>
+                <p>A simple and efficient Task Manager application to help users organize, track, and manage their daily tasks.
+This project was built to practice software development principles, improve productivity tools, and implement clean UI and logic.</p>
+                <div class="project-img">
+                    <img src="Images\taskmanager.jpg" alt="FlashFocus">
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/a1desai/Task-Manager-app" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Add more project cards here -->
+        </div>
     </section>
 
     
 
-    <!--Contact Section-->
+    <!-- ====================== CONTACT SECTION ====================== -->
     <section id="contact">
         <h2>Contact Me</h2>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form id="contactForm">
+
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Your Name" 
+                    required
+                >
+
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Your Email" 
+                    required
+                >
+
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Your Message..." 
+                    required
+                ></textarea>
+
+                <button type="submit" id="send-btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Icons -->
+        <div class="contact-icons">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aryandes20@gmail.com" 
+                class="contact-icon" 
+                target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/aryan-desai-cs/" class="contact-icon" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/a1desai" class="contact-icon" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
     </section>
+
+    <!-- Font load -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Icon uploads -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <!--Footer-->
     <footer id="footer">
-        <p>&copy; 2025 Aryan Desai. All rights reserved.</p> <!--Copyright notice!-->
+        <p>&copy; 2025 Aryan Desai. All rights reserved.</p>
     </footer>
     <!-- Loading all of my js files -->
     <script src="JS/animations.js"></script>
