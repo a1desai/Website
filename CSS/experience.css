@@ -1,0 +1,99 @@
+/* Container for all experience cards */
+#experience-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* stack on smaller screens */
+}
+
+/* Individual experience card */
+.experience-card {
+    background: rgba(0, 32, 63, 0.85);
+    border-radius: 15px;
+    padding: 20px;
+    width: 45%; /* two cards side by side */
+    box-shadow: 0 0 20px rgba(0, 192, 255, 0.5);
+    display: flex;
+    flex-direction: column; /* vertical layout */
+    align-items: center; /* center content */
+    font-family: 'Poppins', sans-serif;
+    color: #e0f7ff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for the card itself */
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 192, 255, 0.7);
+}
+
+/* Role / Position */
+.experience-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #00c0ff;
+    margin-bottom: 8px;
+}
+
+/* Organization with link */
+.experience-card p a {
+    display: inline-block; /* ensures hover works properly */
+    cursor: pointer;
+    color: #cceeff;
+    color: #00c0ff; /* link color */
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Hover effect for all links */
+.experience-card p a:hover {
+    color: #00c0ff;
+    text-decoration: underline;
+}
+
+/* Date */
+.exp-date {
+    font-size: 14px;
+    color: #a0e0ff;
+    margin: 8px 0;
+}
+
+/* Image container */
+.exp-img-box {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+}
+
+/* Image styling */
+.exp-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #00c0ff;
+    box-shadow: 0 0 15px rgba(0, 192, 255, 0.5);
+}
+
+/* First card (Byte) adjustments */
+#experience-container .experience-card:first-child .exp-img-box {
+    margin-top: 25px; /* adjust so image aligns with other cards */
+}
+
+/* First card link (Byte) styling */
+#experience-container .experience-card:first-child p a {
+    display: inline-block;
+    margin-top: 15px; /* pushes it down a bit */
+    color: #00c0ff; /* link color */
+    text-decoration: underline; /* makes it look like a clickable link */
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#experience-container .experience-card:first-child p a:hover {
+    color: #66d9ff; /* subtle hover effect */
+}

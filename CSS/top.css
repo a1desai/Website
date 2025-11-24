@@ -1,31 +1,56 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Top Navbar */
 .navbar {
     width: 100%;
     height: 80px;
-    background: rgba(20, 20, 20, 0.9); 
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 50px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
+
+    /* Blue tech gradient background */
+    background: linear-gradient(90deg, #001f3f, #003366);
+    backdrop-filter: blur(10px); /* glassy effect */
+
+    /* Animated diagonal lines overlay */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated lines */
+.navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(45deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+    animation: moveLines 10s linear infinite;
+}
+
+@keyframes moveLines {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 50px 50px, -50px -50px; }
+}
+
+/* Ensure content stays above overlay */
+.navbar > * {
+    position: relative;
+    z-index: 10;
 }
 
 /* Logo */
 .logo {
     font-size: 28px;
     font-weight: 700;
-    color: white;
+    color: #00c0ff; /* neon cyan-blue */
     font-family: 'Poppins', sans-serif;
+    text-shadow: 0 0 8px rgba(0, 192, 255, 0.7);
+    margin-left: 50px;
 }
 
 /* Navigation Links */
@@ -33,8 +58,13 @@
     list-style: none;
     display: flex;
     gap: 35px;
+
+
+    /* Move links closer to logo */
+    margin-left: 1200px; /* adjust this number to move links more or less left */
 }
 
+/* Nav link style */
 .nav-links li a {
     text-decoration: none;
     font-size: 18px;
@@ -42,10 +72,25 @@
     color: white;
     transition: all 0.3s ease-in-out;
     padding-bottom: 4px;
+    position: relative;
 }
 
-/* Hover Animation (Red line underline) */
+/* Neon underline hover */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #00c0ff;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
 .nav-links li a:hover {
-    color: #ff4d4d;
-    border-bottom: 2px solid #ff4d4d;
+    color: #00c0ff;
 }

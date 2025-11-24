@@ -1,0 +1,52 @@
+/* Skills Container inside About Section */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* force side by side */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual skill boxes */
+.skill-category {
+    background: rgba(0, 32, 63, 0.85); /* dark tech background */
+    border-radius: 15px;
+    padding: 15px 20px;
+    width: 30%; /* three boxes side by side */
+    box-shadow: 0 0 20px rgba(0, 192, 255, 0.5);
+    text-align: left;
+    font-family: 'Poppins', sans-serif; /* modern clean font */
+    color: #e0f7ff; /* slightly soft neon */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Category Title */
+.skill-category h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #00c0ff; /* neon cyan */
+    text-shadow: 0 0 8px rgba(0, 192, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+/* List of skills */
+.skill-category ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 15px;
+    line-height: 1.5; /* spacing for readability */
+}
+
+.skill-category ul li {
+    margin-bottom: 6px;
+    opacity: 0.9;
+    font-weight: 500;
+    letter-spacing: 0.5px; /* subtle techy feel */
+    color: #cceeff; /* softer neon for items */
+}
+
+/* Hover Glow Effect for Boxes */
+.skill-category:hover {
+    box-shadow: 0 0 30px rgba(0, 192, 255, 0.8);
+    transform: translateY(-3px);
+}

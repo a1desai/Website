@@ -7,6 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/top.css">
+    <link rel="stylesheet" href="CSS/introduction.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/skills.css">
+    <link rel="stylesheet" href="CSS/experience.css">
     <!-- Link to the external css file -->
 </head>
 
@@ -20,21 +24,48 @@
             <li><a href="#software-developer">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 
     <!-- Introduction about me -->
     <section id="software-developer">
-        <h2 class="typewrite">Hi, I'm Aryan!</h2> <!-- Secondary Heading-->
-        <p>Computer Science student & aspiring Software Developer</p> <!--Intro Text-->
+        <div class="software-developer-content">
+            <h2 id="typewriter">
+                <span class="intro-text"></span><br>
+                <span class="sub-text"></span>
+            </h2> <!-- Secondary Heading-->
+        </div>
+        <div class="software-dev">
+            <img src="Images\Aryan.jpg" alt="Aryan Desai">
+        </div>
     </section>
 
-    <!--About Me section-->
+    <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2> <!--Section Heading-->
-        <p>I'm a 2nd-year Computer Science student with a strong passion for AI, full-stack development, and creating innovative software solutions. I love transforming ideas into functional, efficient, and well-structured code, and I thrive in collaborative projects that push the boundaries of technology.</p>
+        <div class="about-left">
+            <h2>About Me</h2>
+            <p>
+                I'm a 2nd-year Computer Science student with a passion for AI, full-stack development,
+                and creating innovative software solutions. I love transforming ideas into functional,
+                efficient, and well-structured code, and thrive in collaborative projects that push
+                the boundaries of technology.
+            </p>
+            <div class="about-buttons">
+                <button id="skills-btn">Skills</button>
+                <button id="experience-btn">Experience</button>
+            </div>
+
+            <!-- Skills container -->
+            <div class="skills-container" id="skills-container" style="display: none;"></div>
+
+            <!-- Experience container -->
+            <div class="experience-container" id="experience-container" style="display: none;"></div>
+        </div>
+
+        <div class="about-right">
+            <img src="Images/Aryan.jpg" alt="Aryan Desai">
+        </div>
     </section>
 
     <!--Projects section-->
@@ -42,10 +73,7 @@
         <h2>Projects</h2>
     </section>
 
-    <!--Skills section-->
-    <section id="skills">
-        <h2>Skills</h2>
-    </section>
+    
 
     <!--Contact Section-->
     <section id="contact">
@@ -56,6 +84,9 @@
     <footer id="footer">
         <p>&copy; 2025 Aryan Desai. All rights reserved.</p> <!--Copyright notice!-->
     </footer>
+    <!-- Loading all of my js files -->
+    <script src="JS/animations.js"></script>
+    <script src="JS/skills.js"></script>
 </body>
 
 </html>
