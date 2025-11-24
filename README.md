@@ -59,3 +59,6 @@ aryan-desai-website/
 
 I deployed this website on **Vercel** for fast, reliable hosting.  
 [Visit the live site here](https://aryan-desai-website.vercel.app)
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/73e77f5d-2b41-47de-9902-05cabacd6f2e" />
+
+
