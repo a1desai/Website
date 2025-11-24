@@ -1,19 +1,14 @@
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+const form = document.getElementById("contact-form");
 
-    const params = {
-        from_name: document.getElementById("name").value,
-        email_id: document.getElementById("email").value,
-        message: document.getElementById("message").value
-    };
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
 
-    emailjs.send("service_xxxxx", "template_xxxxx", params)
+    emailjs.sendForm('service_eh50598', 'template_5pp7qii', this)
         .then(() => {
-            document.getElementById("statusMessage").innerHTML = "Message sent successfully!";
-            document.getElementById("statusMessage").style.color = "#00ff88";
-        })
-        .catch(() => {
-            document.getElementById("statusMessage").innerHTML = "Failed to send message.";
-            document.getElementById("statusMessage").style.color = "red";
+            alert("Message sent successfully!");
+            form.reset();
+        }, (error) => {
+            alert("Failed to send message. Please try again later.");
+            console.error(error);
         });
 });

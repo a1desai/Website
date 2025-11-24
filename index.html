@@ -81,10 +81,21 @@
             <div class="project-card">
                 <h3>Kingdom Rush Java Edition</h3>
                 <p>Kingdom Defender is a dynamic tower defense strategy game built entirely with Java Swing, channeling the tactical complexity of the acclaimed Kingdom Rush series. The core objective is to strategically defend pathways against waves of increasingly powerful enemies through careful placement and upgrading of unique defense towers.</p>
+                
                 <!-- Project Image -->
                 <div class="project-img">
-                    <img src="Images\Kingdomrush.jpg" alt="Kingdom Rush Java Edition">
+                    <img src="Images/Kingdomrush.jpg" alt="Kingdom Rush Java Edition">
                 </div>
+
+                <!-- Project Skills -->
+                <div class="project-skills">
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%; background-color: #f39c12;"> 100%</div></div>
+                    </div>
+                </div>
+
+                <!-- Project links -->
                 <div class="project-links">
                     <a href="https://github.com/Gaston-and-Aryan/Kingdom-Rush-Java-Edition.git" target="_blank">GitHub</a>
                     <a href="#" target="_blank">Live Demo</a>
@@ -95,9 +106,19 @@
             <div class="project-card">
                 <h3>FlashFocus</h3>
                 <p>FlashFocus is a Java application designed to help users study efficiently using flashcards and quizzes. Built with Java Swing, it features interactive screens, custom icons, and external API integration to generate flashcards automatically.</p>
+                
                 <div class="project-img">
-                    <img src="Images\FlashFocus.jpg" alt="FlashFocus">
+                    <img src="Images/FlashFocus.jpg" alt="FlashFocus">
                 </div>
+
+                <!-- Project Skills -->
+                <div class="project-skills">
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%; background-color: #f39c12;"> 100%</div></div>
+                    </div>
+                </div>
+
                 <div class="project-links">
                     <a href="https://github.com/Flash-Focus/FlashFocus" target="_blank">GitHub</a>
                     <a href="#" target="_blank">Live Demo</a>
@@ -107,11 +128,20 @@
             <!-- Project Card 3 -->
             <div class="project-card">
                 <h3>Task Manager</h3>
-                <p>A simple and efficient Task Manager application to help users organize, track, and manage their daily tasks.
-This project was built to practice software development principles, improve productivity tools, and implement clean UI and logic.</p>
+                <p>A simple and efficient Task Manager application to help users organize, track, and manage their daily tasks. This project was built to practice software development principles, improve productivity tools, and implement clean UI and logic.</p>
+                
                 <div class="project-img">
-                    <img src="Images\taskmanager.jpg" alt="FlashFocus">
+                    <img src="Images/taskmanager.jpg" alt="Task Manager">
                 </div>
+
+                <!-- Project Skills -->
+                <div class="project-skills">
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%; background-color: #f39c12;"> 100%</div></div>
+                    </div>
+                </div>
+
                 <div class="project-links">
                     <a href="https://github.com/a1desai/Task-Manager-app" target="_blank">GitHub</a>
                     <a href="#" target="_blank">Live Demo</a>
@@ -122,6 +152,7 @@ This project was built to practice software development principles, improve prod
         </div>
     </section>
 
+
     
 
     <!-- ====================== CONTACT SECTION ====================== -->
@@ -130,32 +161,11 @@ This project was built to practice software development principles, improve prod
 
         <!-- Contact Form -->
         <div class="contact-form">
-            <form id="contactForm">
-
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    placeholder="Your Name" 
-                    required
-                >
-
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="Your Email" 
-                    required
-                >
-
-                <textarea 
-                    id="message" 
-                    name="message" 
-                    placeholder="Your Message..." 
-                    required
-                ></textarea>
-
-                <button type="submit" id="send-btn">Send Message</button>
+            <form id="contact-form">
+            <input type="text" name="from_name" placeholder="Your Name" required>
+            <input type="email" name="from_email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
             </form>
         </div>
 
@@ -193,6 +203,14 @@ This project was built to practice software development principles, improve prod
     <!-- Loading all of my js files -->
     <script src="JS/animations.js"></script>
     <script src="JS/skills.js"></script>
+    <script src="JS/contact.js"></script>
+    <!-- Emailjs SDK tag -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    (function(){
+        emailjs.init("lFoUzyGM39mCc3Gw_"); // replace with your EmailJS public key
+    })();
+    </script>
 </body>
 
 </html>
