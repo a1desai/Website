@@ -1,32 +1,30 @@
 /* Footer */
 #footer {
-    width: 100%; /* full width of parent */
-    padding: 20px 0;
-    background: rgba(0, 20, 40, 0.9);
+    width: 100%;
+    padding: 25px 0;
+    background: linear-gradient(180deg, rgba(0, 20, 40, 0.8), rgba(0, 10, 20, 0.95));
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    border-top: 2px solid rgba(0, 192, 255, 0.4);
-    box-shadow: 0 -5px 20px rgba(0, 192, 255, 0.3);
+    border-top: 2px solid rgba(0, 192, 255, 0.3);
+    box-shadow: 0 -5px 20px rgba(0, 192, 255, 0.2);
     position: relative;
 }
 
-/* Footer text */
 #footer p {
-    color: #cceeff;
+    color: #a0d0ff;
     font-size: 14px;
     letter-spacing: 0.5px;
     margin: 0;
-    text-shadow: 0 0 8px rgba(0, 192, 255, 0.4);
-    transition: color 0.3s ease-in-out;
+    text-shadow: 0 0 6px rgba(0, 192, 255, 0.3);
+    transition: all 0.3s ease;
 }
 
 #footer p:hover {
     color: #00c0ff;
+    text-shadow: 0 0 12px rgba(0, 192, 255, 0.6);
 }
 
-/* Prevent horizontal scroll caused by overflowing content */
-body {
-    margin: 0;
+/* Prevent horizontal scroll */
     padding: 0;
     overflow-x: hidden;
 }

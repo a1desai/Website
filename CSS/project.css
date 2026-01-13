@@ -11,144 +11,146 @@
     align-items: center;
 }
 
-/* Keep title centered */
 #projects h2 {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 50px;
     color: #00c0ff;
     text-shadow: 0 0 8px rgba(0, 192, 255, 0.5);
-    text-align: center; /* ensure it's centered */
+    text-align: center;
 }
 
-/* Projects Grid: shift slightly to the left */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    width: 95%; /* slightly less than 100% to shift left */
-    max-width: 1200px;
-    margin-left: 0; /* align left */
-    margin-right: auto; /* keeps title centered while grid moves left */
+    width: 100%;
+    max-width: 1300px;
 }
 
-/* Individual Project Card */
+/* Enhanced Project Card */
 .project-card {
-    background: rgba(0, 32, 63, 0.85);
-    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(0, 32, 63, 0.9), rgba(0, 20, 40, 0.9));
+    border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 0 20px rgba(0, 192, 255, 0.3);
-    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(0, 192, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 192, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
     overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 192, 255, 0.4);
+    border-color: rgba(0, 192, 255, 0.6);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 10px;
 }
 
 .project-card h3 {
     font-size: 22px;
     color: #00c0ff;
-    margin-bottom: 15px;
+    margin: 0;
+    flex: 1;
+}
+
+.project-date {
+    font-size: 12px;
+    color: #00a0cc;
+    background: rgba(0, 192, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
 }
 
 .project-card p {
     font-size: 16px;
     line-height: 1.6;
-    color: #cceeff;
+    color: #d0e8ff;
     flex-grow: 1;
+    margin-bottom: 15px;
 }
 
-/* Project links (GitHub, Live Demo) */
-.project-links {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.project-links a {
-    text-decoration: none;
-    color: #00c0ff;
-    border: 1px solid #00c0ff;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-}
-
-.project-links a:hover {
-    background: #00c0ff;
-    color: #001f3f;
-    box-shadow: 0 0 15px rgba(0, 192, 255, 0.6);
-    transform: translateY(-3px);
-}
-
-/* Hover effect for project card */
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(0, 192, 255, 0.6);
-}
-
-/* Optional: animated background overlay for techy feel */
-.project-card::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(0, 192, 255, 0.05),
-        rgba(0, 192, 255, 0.05) 2px,
-        transparent 2px,
-        transparent 4px
-    );
-    transform: rotate(25deg);
-    pointer-events: none;
+.project-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: rgba(0, 192, 255, 0.1);
 }
 
 .project-card img {
     width: 100%;
-    height: 180px; /* fixed height */
-    object-fit: cover; /* makes the image cover the box without distortion */
-    border-radius: 12px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 15px rgba(0, 192, 255, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.project-card img:hover {
-    transform: scale(1.05); /* optional hover zoom */
-}
-
-.project-skills {
-    margin-top: 15px;
-}
-
-.skill {
-    margin-bottom: 10px;
-}
-
-.skill span {
-    font-size: 14px;
-    color: #cceeff;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.skill-bar {
-    width: 100%;
-    height: 20px;
-    background: rgba(0, 192, 255, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.skill-fill {
     height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Modern skill tags */
+.project-skills {
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.skill-tag {
+    font-size: 12px;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, rgba(0, 192, 255, 0.15), rgba(0, 160, 204, 0.15));
+    border: 1px solid rgba(0, 192, 255, 0.3);
+    border-radius: 20px;
+    color: #00c0ff;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(0, 192, 255, 0.25);
+    border-color: rgba(0, 192, 255, 0.6);
+}
+
+/* Project links */
+.project-links {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(0, 192, 255, 0.1), rgba(0, 160, 204, 0.1));
+    color: #00c0ff;
+    border: 1px solid rgba(0, 192, 255, 0.3);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    background: rgba(0, 192, 255, 0.25);
+    border-color: #00c0ff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 192, 255, 0.3);
+}    display: flex;
     align-items: center;
     justify-content: flex-end; /* percentage on right */
     padding-right: 8px;

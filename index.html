@@ -15,11 +15,17 @@
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/features.css">
     <!-- Link to the external css file -->
 </head>
 
 <body>
 <!-- Everything visible on the page goes inside my body -->
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <div class="navbar">
         <div class="logo">Aryan Desai</div>
@@ -39,6 +45,10 @@
                 <span class="intro-text"></span><br>
                 <span class="sub-text"></span>
             </h2> <!-- Secondary Heading-->
+            <div class="intro-buttons">
+                <a href="#contact" class="cta-button">Get In Touch</a>
+                <button id="resume-download" class="cta-button secondary">Download Resume</button>
+            </div>
         </div>
     </section>
 
@@ -48,14 +58,12 @@
         <div class="about-left">
             <h2>About Me</h2>
             <p>
-                I'm a 2nd-year Computer Science student with a passion for AI, full-stack development,
-                and creating innovative software solutions. I love transforming ideas into functional,
-                efficient, and well-structured code, and thrive in collaborative projects that push
-                the boundaries of technology.
+                I'm a B.Sc. Computer Science student at Toronto Metropolitan University with a passion for AI/ML, full-stack development, and building innovative solutions that make an impact. I have hands-on experience as a Technology Director leading development teams and as a Backend Engineer working with quantum visualization platforms. I thrive on solving complex problems, collaborating with talented teams, and creating scalable, efficient code that transforms ideas into reality.
             </p>
             <div class="about-buttons">
-                <button id="skills-btn">Skills</button>
-                <button id="experience-btn">Experience</button>
+                <button id="skills-btn" class="btn-primary">Skills</button>
+                <button id="experience-btn" class="btn-primary">Experience</button>
+                <a href="#contact" class="btn-primary">Contact</a>
             </div>
 
             <!-- Skills container -->
@@ -77,76 +85,103 @@
         <div class="projects-grid">
             <!-- Project Card 1 -->
             <div class="project-card">
-                <h3>Kingdom Rush Java Edition</h3>
-                <p>Kingdom Defender is a dynamic tower defense strategy game built entirely with Java Swing, channeling the tactical complexity of the acclaimed Kingdom Rush series. The core objective is to strategically defend pathways against waves of increasingly powerful enemies through careful placement and upgrading of unique defense towers.</p>
+                <div class="project-header">
+                    <h3>BeaverBuddy</h3>
+                    <span class="project-date">December 2025</span>
+                </div>
+                <p>A full-stack mental health web application with React, TypeScript, Node.js, and PostgreSQL. Features UI components with responsive design following accessibility best practices, optimized SQL queries, and implements CRUD operations supporting 100+ concurrent users with 30% latency reduction.</p>
                 
-                <!-- Project Image -->
                 <div class="project-img">
-                    <img src="Images/Kingdomrush.jpg" alt="Kingdom Rush Java Edition">
+                    <img src="Images/Kingdomrush.jpg" alt="BeaverBuddy">
                 </div>
 
-                <!-- Project Skills -->
                 <div class="project-skills">
-                    <div class="skill">
-                        <span>Java</span>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 100%; background-color: #f39c12;"> 100%</div></div>
-                    </div>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">PostgreSQL</span>
                 </div>
 
-                <!-- Project links -->
                 <div class="project-links">
-                    <a href="https://github.com/Gaston-and-Aryan/Kingdom-Rush-Java-Edition.git" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
             </div>
 
             <!-- Project Card 2 -->
             <div class="project-card">
-                <h3>FlashFocus</h3>
-                <p>FlashFocus is a Java application designed to help users study efficiently using flashcards and quizzes. Built with Java Swing, it features interactive screens, custom icons, and external API integration to generate flashcards automatically.</p>
+                <div class="project-header">
+                    <h3>FlashFocus</h3>
+                    <span class="project-date">June 2025</span>
+                </div>
+                <p>An educational web application with React and TypeScript frontend, developing reusable UI components using modern JavaScript/HTML/CSS techniques. Designed and implemented RESTful API backend with Java, managing database operations and reducing content creation time by 80% through efficient data processing.</p>
                 
                 <div class="project-img">
                     <img src="Images/FlashFocus.jpg" alt="FlashFocus">
                 </div>
 
-                <!-- Project Skills -->
                 <div class="project-skills">
-                    <div class="skill">
-                        <span>Java</span>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 100%; background-color: #f39c12;"> 100%</div></div>
-                    </div>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">REST APIs</span>
                 </div>
 
                 <div class="project-links">
-                    <a href="https://github.com/Flash-Focus/FlashFocus" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="https://github.com/Flash-Focus/FlashFocus" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
             </div>
 
             <!-- Project Card 3 -->
             <div class="project-card">
-                <h3>Task Manager</h3>
-                <p>A simple and efficient Task Manager application to help users organize, track, and manage their daily tasks. This project was built to practice software development principles, improve productivity tools, and implement clean UI and logic.</p>
+                <div class="project-header">
+                    <h3>AI Racer</h3>
+                    <span class="project-date">November 2025</span>
+                </div>
+                <p>Analyzed and processed 1000+ training episodes using Python with Pandas and NumPy, optimizing AI model performance through data-driven insights and achieving 60% improvement in task completion. Implemented automated testing and debugging procedures for real-time system integration.</p>
                 
                 <div class="project-img">
-                    <img src="Images/taskmanager.jpg" alt="Task Manager">
+                    <img src="Images/taskmanager.jpg" alt="AI Racer">
                 </div>
 
-                <!-- Project Skills -->
                 <div class="project-skills">
-                    <div class="skill">
-                        <span>Java</span>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 100%; background-color: #f39c12;"> 100%</div></div>
-                    </div>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Data Analysis</span>
                 </div>
 
                 <div class="project-links">
-                    <a href="https://github.com/a1desai/Task-Manager-app" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
             </div>
 
-            <!-- Add more project cards here -->
+            <!-- Project Card 4 - New -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Quantum Visualization Platform</h3>
+                    <span class="project-date">November 2025 - Present</span>
+                </div>
+                <p>Developed backend architecture for quantum visualization platform, writing scalable code and implementing database operations. Participated in team meetings and technical discussions, contributing to design decisions in a fast-paced collaborative environment.</p>
+                
+                <div class="project-img">
+                    <img src="Images/Kingdomrush.jpg" alt="Quantum Platform">
+                </div>
+
+                <div class="project-skills">
+                    <span class="skill-tag">Backend Dev</span>
+                    <span class="skill-tag">Database Design</span>
+                    <span class="skill-tag">Quantum Computing</span>
+                    <span class="skill-tag">Scalability</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </div>
         </div>
     </section>
 
