@@ -23,6 +23,26 @@ const smoothScroll = (target) => {
     }
 };
 
+// Back to Top Button
+function initBackToTopButton() {
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // Intersection Observer for fade-in animations
 const observerOptions = {
     threshold: 0.1,
@@ -57,6 +77,9 @@ window.addEventListener("DOMContentLoaded", () => {
         card.classList.add('fade-in');
         observer.observe(card);
     });
+
+    // Initialize Back to Top button
+    initBackToTopButton();
 
     // Resume download button
     const resumeBtn = document.getElementById('resume-download');

@@ -2,16 +2,16 @@
 #about {
     width: 100%;
     min-height: auto;
-    background: linear-gradient(135deg, #000000, #001f3f, #002266);
-    color: #ffffff;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f1 100%);
+    color: #2d3436;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 40px 30px;
-    font-family: 'Poppins', sans-serif;
+    padding: 80px 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     overflow: hidden;
-    gap: 30px;
+    gap: 50px;
 }
 
 #about-canvas {
@@ -20,32 +20,42 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* behind text and image */
-    pointer-events: none; /* so buttons are clickable */
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.03;
 }
 
 /* Left Side - Text Content */
 .about-left {
-    max-width: 700px;
+    max-width: 600px;
     flex: 1;
-    transform: none;
     z-index: 1;
+    animation: fadeInLeft 0.8s ease-out;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 #about h2 {
-    font-size: 38px;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 12px;
-    color: #00c0ff;
-    text-shadow: 0 0 8px rgba(0, 192, 255, 0.5);
+    margin-bottom: 20px;
+    color: #1a9b8e;
 }
 
 #about p {
     font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 16px;
-    color: #e0f7ff;
-    text-shadow: 0 0 6px rgba(0, 192, 255, 0.7);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
 }
 
 /* Buttons */
@@ -53,78 +63,60 @@
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #001f3f, #003366);
-    color: #00c0ff;
+    background: linear-gradient(135deg, #1a9b8e, #00d4d4);
+    color: white;
     font-size: 14px;
     font-weight: 600;
-    padding: 9px 20px;
-    border: 2px solid #00c0ff;
-    border-radius: 8px;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-    box-shadow: 0 0 12px rgba(0, 192, 255, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 192, 255, 0.2);
-    transition: left 0.3s ease;
-    z-index: -1;
-}
-
-.btn-primary:hover::before {
-    left: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(26, 155, 142, 0.2);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #003366, #0055aa);
-    color: #ffffff;
-    box-shadow: 0 0 20px rgba(0, 192, 255, 0.6);
     transform: translateY(-3px);
-}
-    box-shadow: 0 0 20px rgba(0, 192, 255, 0.7);
+    box-shadow: 0 8px 25px rgba(26, 155, 142, 0.3);
 }
 
+/* Right Side - Image */
 .about-right {
-    width: 240px; /* smaller to fit better */
-    height: 240px;
-    background: linear-gradient(135deg, #001f3f, #002266);
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0, 192, 255, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    flex-shrink: 0;
-    transform: none;
-    margin-left: 0;
+    flex: 1;
+    max-width: 450px;
+    animation: fadeInRight 0.8s ease-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .about-right img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(26, 155, 142, 0.15);
     object-fit: cover;
-    border-radius: 20px;
 }
 
 /* Skills and Experience Containers */
 #skills-container,
 #experience-container {
     width: 100%;
-    margin-top: 16px;
+    margin-top: 20px;
     display: none;
 }
 
@@ -133,59 +125,52 @@
     display: grid !important;
 }
 
-/* Make sure containers sit in the about-left section */
-.about-left #skills-container,
-.about-left #experience-container {
-    max-width: 100%;
-}
-
 /* Mobile Responsive */
 @media (max-width: 1024px) {
     #about {
         flex-direction: column;
-        padding: 50px 30px;
-        gap: 30px;
+        padding: 60px 30px;
+        gap: 40px;
     }
 
     .about-left {
         max-width: 100%;
-        transform: none;
     }
 
     .about-right {
         margin: 0 auto;
+        max-width: 350px;
     }
 }
 
 @media (max-width: 768px) {
     #about {
-        padding: 40px 20px;
-        gap: 20px;
+        padding: 60px 20px;
+        gap: 30px;
     }
 
     #about h2 {
-        font-size: 32px;
-        margin-bottom: 12px;
+        font-size: 1.75rem;
+        margin-bottom: 15px;
     }
 
     #about p {
-        font-size: 16px;
-        line-height: 1.6;
-        margin-bottom: 16px;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 15px;
     }
 
     .about-buttons {
         gap: 10px;
-        margin-bottom: 16px;
+        margin-bottom: 15px;
     }
 
     .btn-primary {
-        font-size: 14px;
-        padding: 8px 20px;
+        font-size: 13px;
+        padding: 9px 18px;
     }
 
     .about-right {
-        width: 240px;
-        height: 240px;
+        max-width: 280px;
     }
 }
