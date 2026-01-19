@@ -11,6 +11,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     overflow: hidden;
+    border-top: 3px solid #1a9b8e;
     gap: 50px;
 }
 

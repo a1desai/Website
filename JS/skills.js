@@ -59,8 +59,8 @@ function toggleSkills() {
         skillsContainer.innerHTML = '';
         skillsContainer.style.display = 'grid';
         skillsContainer.style.gridTemplateColumns = 'repeat(3, 1fr)';
-        skillsContainer.style.marginTop = '12px';
-        skillsContainer.style.gap = '12px';
+        skillsContainer.style.marginTop = '20px';
+        skillsContainer.style.gap = '20px';
 
         skillsData.forEach((category, index) => {
             const div = document.createElement('div');
@@ -92,37 +92,12 @@ function toggleSkills() {
                 li.appendChild(checkmark);
                 li.appendChild(text);
                 
-                li.addEventListener('mouseenter', function() {
-                    text.style.color = '#00c0ff';
-                    text.style.fontWeight = '600';
-                    checkmark.style.transform = 'scale(1.3)';
-                });
-                
-                li.addEventListener('mouseleave', function() {
-                    text.style.color = '#c8dff5';
-                    text.style.fontWeight = '400';
-                    checkmark.style.transform = 'scale(1)';
-                });
-                
+                // Remove inline hover styles - let CSS handle it
                 ul.appendChild(li);
             });
             div.appendChild(ul);
 
-            // Card hover effects
-            div.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px)';
-                this.style.boxShadow = '0 15px 35px rgba(0, 192, 255, 0.25)';
-                this.style.backgroundColor = 'rgba(0, 192, 255, 0.12)';
-                this.style.borderColor = 'rgba(0, 192, 255, 0.4)';
-            });
-
-            div.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = 'none';
-                this.style.backgroundColor = 'rgba(0, 192, 255, 0.08)';
-                this.style.borderColor = 'rgba(0, 192, 255, 0.2)';
-            });
-
+            // Remove inline hover styles - let CSS handle it
             skillsContainer.appendChild(div);
         });
 
@@ -148,8 +123,8 @@ function toggleExperience() {
         experienceContainer.innerHTML = '';
         experienceContainer.style.display = 'grid';
         experienceContainer.style.gridTemplateColumns = 'repeat(3, 1fr)';
-        experienceContainer.style.marginTop = '12px';
-        experienceContainer.style.gap = '12px';
+        experienceContainer.style.marginTop = '20px';
+        experienceContainer.style.gap = '20px';
 
         experienceData.forEach(exp => {
             const div = document.createElement('div');
@@ -188,19 +163,7 @@ function toggleExperience() {
             imgBox.appendChild(img);
             div.appendChild(imgBox);
 
-            // Hover effect
-            div.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-6px)';
-                this.style.boxShadow = '0 10px 25px rgba(0, 192, 255, 0.2)';
-                this.style.backgroundColor = 'rgba(0, 192, 255, 0.12)';
-            });
-
-            div.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = 'none';
-                this.style.backgroundColor = 'rgba(0, 192, 255, 0.08)';
-            });
-
+            // Remove inline hover styles - let CSS handle it
             experienceContainer.appendChild(div);
         });
 
@@ -215,4 +178,3 @@ function toggleExperience() {
 // Event listeners
 document.getElementById('skills-btn').addEventListener('click', toggleSkills);
 document.getElementById('experience-btn').addEventListener('click', toggleExperience);
-

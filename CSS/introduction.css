@@ -11,6 +11,7 @@
     color: #2d3436;
     position: relative;
     overflow: hidden;
+    border-top: 3px solid #1a9b8e;
 }
 
 /* Subtle background accent */
@@ -146,6 +147,8 @@
 
 .cta-button.secondary:hover {
     background: #f0f9f8;
+}
+
 /* Fade-in animation */
 .fade-in {
     opacity: 0;
@@ -238,10 +241,6 @@
 
     .cta-button {
         padding: 11px 20px;
-        font-size: 12px;
-    }
-}    .cta-button {
-        padding: 9px 20px;
         font-size: 12px;
     }
 }
