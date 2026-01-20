@@ -81,11 +81,19 @@ window.addEventListener("DOMContentLoaded", () => {
     // Initialize Back to Top button
     initBackToTopButton();
 
-    // Resume download button
+    // Resume Download - Simple direct download
     const resumeBtn = document.getElementById('resume-download');
     if (resumeBtn) {
         resumeBtn.addEventListener('click', () => {
-            showResumeModal();
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = 'Resume/Aryan_Desai_Resume.pdf'; // Path to your resume PDF
+            link.download = 'Aryan_Desai_Resume.pdf'; // Name of the downloaded file
+            
+            // Trigger the download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     }
 
@@ -118,123 +126,6 @@ function initDarkMode() {
     }
 }
 
-// Resume Modal
-function showResumeModal() {
-    const modal = document.getElementById('resume-modal');
-    if (!modal) {
-        createResumeModal();
-        return;
-    }
-    modal.style.display = 'flex';
-}
-
-function createResumeModal() {
-    const modal = document.createElement('div');
-    modal.id = 'resume-modal';
-    modal.className = 'modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Download Resume</h2>
-            <p>Choose your preferred format:</p>
-            <div class="modal-buttons">
-                <button id="pdf-download" class="modal-btn pdf-btn">
-                    <i class="fas fa-file-pdf"></i> PDF
-                </button>
-                <button id="docx-download" class="modal-btn docx-btn">
-                    <i class="fas fa-file-word"></i> Word
-                </button>
-            </div>
-        </div>
-    `;
-
-    document.body.appendChild(modal);
-
-    // PDF Download
-    const pdfBtn = modal.querySelector('#pdf-download');
-    pdfBtn.addEventListener('click', () => {
-        downloadResume('pdf');
-        modal.style.display = 'none';
-    });
-
-    // DOCX Download
-    const docxBtn = modal.querySelector('#docx-download');
-    docxBtn.addEventListener('click', () => {
-        downloadResume('docx');
-        modal.style.display = 'none';
-    });
-
-    const closeBtn = modal.querySelector('.close-modal');
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-}
-
-// Download Resume function
-function downloadResume(format) {
-    const resumeContent = `ARYAN DESAI
-AI/ML Enthusiast | Full-Stack Developer | Cybersecurity
-
-CONTACT
-Email: aryan@example.com
-LinkedIn: linkedin.com/in/aryan
-GitHub: github.com/aryan
-
-EXPERIENCE
-
-Technology Director
-Google Developer Groups on Campus
-November 2025 - Present
-Lead development team using Agile methodologies, conducting peer code reviews and mentoring 50+ students on web development
-
-AI/ML Contributor
-Byte - SecureByte
-September 2025 - November 2025
-Optimized codebase processing workflows using Python, implementing automated testing reducing failures by 35%
-
-Back End Developer
-Quantum Science and Engineering Club
-November 2025 - Present
-Developed backend architecture for quantum visualization platform, implementing scalable code and database operations
-
-SKILLS
-
-Languages: JavaScript, TypeScript, Python, C++, Java, SQL, HTML/CSS, C, Bash
-Web Technologies: React.js, Node.js, Express.js, Next.js, PostgreSQL, REST APIs, TailwindCSS
-Tools & Frameworks: Docker, AWS, Git/GitHub, PyTorch, Jest, TensorFlow, Linux/Unix
-
-PROJECTS
-
-BeaverBuddy - Full-stack mental health web application with React, TypeScript, Node.js, PostgreSQL
-FlashFocus - AI-powered learning platform with Machine Learning and Web Technologies
-AI Racer - AI racing game built with Python and game development technologies
-Quantum Platform - Quantum visualization and computation platform with Backend technologies`;
-
-    if (format === 'pdf') {
-        const element = document.createElement('a');
-        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(resumeContent));
-        element.setAttribute('download', 'Aryan_Desai_Resume.pdf');
-        element.style.display = 'none';
-        document.body.appendChild(element);
-        element.click();
-        document.body.removeChild(element);
-    } else if (format === 'docx') {
-        const element = document.createElement('a');
-        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(resumeContent));
-        element.setAttribute('download', 'Aryan_Desai_Resume.docx');
-        element.style.display = 'none';
-        document.body.appendChild(element);
-        element.click();
-        document.body.removeChild(element);
-    }
-}
-
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const heroSection = document.getElementById('software-developer');
@@ -248,4 +139,3 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
     initDarkMode();
 });
-
